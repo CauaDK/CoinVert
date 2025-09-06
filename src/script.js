@@ -1,4 +1,4 @@
-const API_KEY = "ea18769c21f5fac2023714fc";
+const API_KEY = "c218ba077afa3c1fa2255dd5";
 
 const selectsMoeda = document.querySelectorAll("[data-select]");
 const selectMoedaCota = document.querySelector("[data-cotacao]");
@@ -7,7 +7,7 @@ const tagMoedas = document.querySelectorAll("[data-value]");
 const convertNumber = document.querySelector("[data-convert-number]");
 const result = document.querySelector("[data-result]");
 
-fetch(`https://v6.exchangerate-api.com/v6/${API_KEY}/latest/BRLa`)
+fetch(`https://v6.exchangerate-api.com/v6/${API_KEY}/latest/BRL`)
   .then((res) => res.json())
   .then((data) => {
     let taxas = data.conversion_rates;
