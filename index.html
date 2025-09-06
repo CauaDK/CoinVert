@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/output.css" />
+    <title>CoinVert</title>
+  </head>
+  <body class="bg-gray-01">
+    <header class="w-full flex justify-center bg-gray-11">
+      <img class="py-12" src="./assets/COINVERT.svg" alt="" />
+    </header>
+    <main class="mb-30 lg:my-30">
+      <section
+        class="flex flex-col lg:flex-row items-center lg:mr-[5%] xl:mr-[13.5%] mb-30"
+      >
+        <div
+          class="font-roboto text-xl/7 font-normal text-gray-10 py-23 2xl:py-46 px-[15.6%] lg:pl-[15.6%] lg:pr-[14.6%] bg-gray-02 flex flex-col gap-5 md:rounded-r-xl justify-center"
+        >
+          <p
+            class="before:content-[''] before:h-10 before:w-1.5 before:absolute before:ml-[-20px] before:mt-1.5 before:rounded-sm before:bg-gradient-to-b before:from-yellow-01 before:to-yellow-02"
+          >
+            Este conversor permite calcular valores em tempo real entre as
+            principais moedas do mundo. <br />
+            Entre elas o Real (R$), Dólar Americano (US$), Euro (€), Libra
+            Esterlina (£), Iene Japonês (JP¥), Yuan Chinês (CN¥) e Peso
+            Argentino (AR$), entre outras.
+          </p>
+          <p>
+            Além disso pode exibir as cotações atualizadas de cada uma delas.
+          </p>
+        </div>
+        <img
+          class="w-[90%] md:w-[70%] lg:w-[41%] rounded-xl mt-[-32px] lg:mt-0 lg:ml-[-10%]"
+          src="./assets/imagem.jpg"
+          alt=""
+        />
+      </section>
+      <section
+        class="bg-gray-10 border-b-2 border-b-yellow-02 px-[13.5%] py-15 lg:grid lg:grid-cols-5 justify-center items-center space-y-8 lg:space-y-0 mb-20"
+      >
+        <div class="flex gap-2 items-end col-span-2">
+          <p
+            class="text-gray-07 text-2xl font-medium font-roboto"
+            data-value=""
+          >
+            RS
+          </p>
+          <input
+            data-convert-number=""
+            type="number"
+            name="convert-value"
+            class="bg-white text-gray-12 text-4xl lg:text-6xl w-3/4 font-robotoMono rounded-md p-3 outline-0 placeholder:text-gray-03"
+            placeholder="0.00"
+          />
+        </div>
+        <div class="flex justify-center">
+          <img class="rotate-90 lg:rotate-0" src="./assets/seta.svg" alt="" />
+        </div>
+        <div class="flex gap-2 items-end justify-end col-span-2">
+          <p
+            class="text-gray-07 text-2xl font-medium font-roboto"
+            data-value=""
+          >
+            RS
+          </p>
+          <p
+            class="text-gray-01 text-4xl lg:text-6xl font-robotoMono max-w-full overflow-x-auto overflow-y-hidden"
+            data-result=""
+          >
+            0.00
+          </p>
+        </div>
+      </section>
+      <section class="px-[13.5%] relative space-y-10 mb-20">
+        <h1 class="font-poppins text-gray-04 text-3xl font-semibold tracking-1">
+          CONVERTER
+        </h1>
+        <img
+          class="absolute top-0 right-[13.5%]"
+          src="./assets/converter.svg"
+          alt=""
+        />
+        <div
+          class="flex flex-col md:flex-row justify-between gap-6 md:gap-12 items-center"
+        >
+          <div class="flex gap-5 w-full md:items-center">
+            <label
+              for=""
+              class="font-poppins text-gray-08 text-2xl font-semibold"
+              >de:</label
+            >
+            <select
+              data-select=""
+              name=""
+              id=""
+              class="w-full bg-white outline-0 px-3 py-1.5 border-2 border-gray-02 rounded-md text-gray-10 font-semibold font-roboto text-base"
+            ></select>
+          </div>
+          <div class="flex gap-5 w-full items-center">
+            <label
+              for=""
+              class="font-poppins text-gray-08 text-2xl font-semibold"
+              >para:</label
+            >
+            <select
+              data-select=""
+              name=""
+              id=""
+              class="w-full bg-white outline-0 px-3 py-1.5 border-2 border-gray-02 rounded-md text-gray-10 font-semibold font-roboto text-base"
+            ></select>
+          </div>
+        </div>
+      </section>
+      <section class="px-[13.5%] relative space-y-10">
+        <h1 class="font-poppins text-gray-04 text-3xl font-semibold tracking-1">
+          COTAÇÃO
+        </h1>
+        <img
+          class="absolute top-0 right-[13.5%]"
+          src="./assets/cotacao.svg"
+          alt=""
+        />
+        <section class="space-y-5">
+          <div class="flex flex-col md:flex-row gap-5 md:items-center">
+            <label
+              for=""
+              class="font-poppins text-gray-08 text-2xl/8 font-semibold"
+              >selecione uma moeda:</label
+            >
+            <select
+              data-cotacao=""
+              name=""
+              id=""
+              class="w-3/5 md:w-1/5 bg-white outline-0 px-3 py-1.5 border-2 border-gray-02 rounded-md text-gray-10 font-semibold font-roboto text-base"
+            ></select>
+          </div>
+          <div
+            data-box-cotacao=""
+            class="text-base text-gray-10 font-roboto font-semibold grid grid-cols-[repeat(auto-fit,minmax(150px,1fr))] gap-x-7 gap-y-2"
+          ></div>
+        </section>
+      </section>
+    </main>
+    <footer class="px-[13.5%] py-20 bg-gray-11">
+      <div class="flex flex-wrap justify-between gap-10">
+        <div class="w-100">
+          <img src="./assets/COINVERT.svg" alt="" />
+          <div class="w-6 h-1 bg-gray-08 my-5"></div>
+          <p class="text-gray-01 font-roboto font-normal text-base/6">
+            Um projeto realizado por Cauã Mohor Pardini, acesse o portfolio
+            <a
+              href=""
+              class="relative uppercase font-bold before:w-full before:h-0.5 before:absolute before:bg-gray-01 before:right-0 before:top-full"
+            >
+              aqui</a
+            >
+          </p>
+        </div>
+        <div class="w-100">
+          <h1
+            class="text-2xl/7.5 text-gray-08 font-semibold font-poppins tracking-1"
+          >
+            CONTATO
+          </h1>
+          <div class="w-6 h-1 bg-gray-08 my-5"></div>
+          <ul
+            class="flex flex-col md:flex-row gap-2 md:gap-7 text-gray-01 font-roboto text-xl tracking-1 font-normal"
+          >
+            <li><a href="">(99) 99999-9999</a></li>
+            <li><a href="">coinvert@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <p
+        class="text-center mt-15 text-gray-05 font-roboto font-normal text-base/6"
+      >
+        © 2025 CoinVert. Alguns direitos reservados.
+      </p>
+    </footer>
+    <script src="./src/script.js"></script>
+  </body>
+</html>
